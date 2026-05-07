@@ -1,8 +1,10 @@
-# Thermal-Video-Frame-Extraction-Georeferencing
-This provides two scripts and a base folder structure for extracting individual thermal video frames and using on-board GNSS data to approximately georeference the images.
+# UAV Based Ungulate Monitoring Code and Data
+This repository provides all of the scripts and data to support the an ungulate monitoring paper in review (link tbc).
+For thermal video frame extraction, this provides two scripts and a base folder structure for extracting individual thermal video frames and using on-board GNSS data to approximately georeference the images.
+For the Bayesian Modelling, there is an R-based analysis script, as well as a zipped folder containing the datasets.
 
 # Folder structure
-An empty folder structure is provided which helps to store data within and organise outputs. The location of where each script input should be placed is also linked to this folder structure to help with the running of the scripts. An overview can be seen below:
+Within the Video Extractor setup, an empty folder structure is provided which helps to store data within and organise outputs. The location of where each script input should be placed is also linked to this folder structure to help with the running of the scripts. An overview can be seen below:
 - Base Structure:
 	- Georeferenced_Images:
 		- Output location for each of the georeferenced frams of interest
@@ -17,7 +19,9 @@ An empty folder structure is provided which helps to store data within and organ
 - Frame_Georeferencer.py
 	- The python script for georeferncing each specified frame from the Thermal_Signatures_Log file
 
-# Workflow
+Within the Bayesian Analysis setup, there is a completed R environment script for undertaking the modelling, as well as a zipped dataset.
+
+# Workflow for thermal video extraction
 1. Copy the BaseStructure to a location of your choosing.
 2. Within your video, identify the time of the frames to be georeferenced and add them to the Thermal_Signatures_Log.csv
 3. Convert the minutes and seconds values to seconds. this can usually be achived by multiplying the minutes:seconds cell by 86400. See here for more information: https://www.w3schools.com/excel/excel_howto_convert_time_to_seconds.php
